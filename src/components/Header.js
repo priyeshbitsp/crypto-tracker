@@ -48,7 +48,7 @@ const Header = () => {
               variant="h6"
               className={classes.title}
             >
-              Crypto Hunter
+              Crypto Watch
             </Typography>
             {/* <Button color="inherit">Login</Button> */}
             <Select
