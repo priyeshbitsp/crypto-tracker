@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { CoinList } from "../config/api";
-import { useHistory, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 export function numberWithCommas(x) {
@@ -140,12 +140,12 @@ export default function CoinsTable() {
                             gap: 15,
                           }}
                         >
-                          {/* <img
+                          <img
                             src={row?.image}
                             alt={row.name}
                             height="50"
                             style={{ marginBottom: 10 }}
-                          /> */}
+                          />
                           <div
                             style={{ display: "flex", flexDirection: "column" }}
                           >

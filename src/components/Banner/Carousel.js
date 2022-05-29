@@ -1,6 +1,5 @@
-// import { makeStyles } from "@material-ui/core";
 import axios from "axios";
-import React, { Component } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
