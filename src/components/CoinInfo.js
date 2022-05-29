@@ -64,13 +64,8 @@ const CoinInfo = ({ coin }) => {
     setHistoricData(data.prices);
   };
 
-  console.log("coin", coin);
-  console.log("flag", flag);
-  console.log("historucData", historicData);
-
   useEffect(() => {
     fetchHistoricData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [days]);
 
   const darkTheme = createTheme({

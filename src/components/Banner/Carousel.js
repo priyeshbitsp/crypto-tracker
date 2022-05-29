@@ -14,48 +14,12 @@ const Carousel = () => {
 
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
-
-    console.log(data);
     setTrending(data);
   };
 
   useEffect(() => {
     fetchTrendingCoins();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
-
-  //   const useStyles = makeStyles((theme) => ({
-  //     carousel: {
-  //       height: "50%",
-  //       display: "flex",
-  //       alignItems: "center",
-  //     },
-  //     carouselItem: {
-  //       display: "flex",
-  //       flexDirection: "column",
-  //       alignItems: "center",
-  //       cursor: "pointer",
-  //       textTransform: "uppercase",
-  //       color: "white",
-  //     },
-  //   }));
-
-  //   const classes = useStyles();
-  //   const classes = {
-  //     carousel: {
-  //       height: "50%",
-  //       display: "flex",
-  //       alignItems: "center",
-  //     },
-  //     carouselItem: {
-  //       display: "flex",
-  //       flexDirection: "column",
-  //       alignItems: "center",
-  //       cursor: "pointer",
-  //       textTransform: "uppercase",
-  //       color: "white",
-  //     },
-  //   };
 
   const items = trending.map((coin) => {
     let profit = coin?.price_change_percentage_24h >= 0;

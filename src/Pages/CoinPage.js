@@ -9,7 +9,6 @@ import { CryptoState } from "../CryptoContext";
 
 const CoinPage = () => {
   const { id } = useParams();
-  console.log("Id", id);
   const [coin, setCoin] = useState();
 
   const { currency, symbol } = CryptoState();
@@ -22,7 +21,6 @@ const CoinPage = () => {
 
   useEffect(() => {
     fetchCoin();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const useStyles = makeStyles((theme) => ({
